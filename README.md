@@ -1,6 +1,6 @@
 # InstaActivity
 Instagram-like activity indicator, pure swift 3 version.
-
+![Screenshot](demo.gif)
 ## Installation
 
 ### Manually
