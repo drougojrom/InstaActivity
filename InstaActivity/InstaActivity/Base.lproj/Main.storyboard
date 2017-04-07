@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -49,16 +50,26 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mk-h8-NDt">
-                                <rect key="frame" x="164" y="629" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="158.5" y="629" width="57" height="30"/>
+                                <state key="normal" title="Animate"/>
                                 <connections>
                                     <action selector="actionStartAnimatingWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hpp-Vl-95F"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFr-N1-nmg" customClass="InstaActivity" customModule="InstaActivity" customModuleProvider="target">
+                                <rect key="frame" x="299" y="197" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="CrJ-jp-gP6"/>
+                                    <constraint firstAttribute="height" constant="50" id="DuF-Tv-GOp"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.49019607840000001" green="0.54117647059999996" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="LFr-N1-nmg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-10" id="Krj-Ls-l57"/>
                             <constraint firstItem="VdI-4N-dT8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MGk-og-jAX"/>
+                            <constraint firstItem="LFr-N1-nmg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="177" id="Ozk-hd-tFq"/>
                             <constraint firstItem="7mk-h8-NDt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QGS-xK-gis"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7mk-h8-NDt" secondAttribute="bottom" constant="8" id="V6X-nX-R2j"/>
                             <constraint firstItem="VdI-4N-dT8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Xsw-yl-cDv"/>
@@ -66,10 +77,12 @@
                     </view>
                     <connections>
                         <outlet property="insActivity" destination="VdI-4N-dT8" id="AR3-hQ-4gp"/>
+                        <outlet property="insActivity2" destination="LFr-N1-nmg" id="Ztl-mr-X6r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
     </scenes>
 </document>

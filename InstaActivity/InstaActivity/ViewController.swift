@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var insActivity: InstaActivity!
+    @IBOutlet weak var insActivity2: InstaActivity!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,13 @@ class ViewController: UIViewController {
         insActivity.rotationDuration = 10
         insActivity.strokeColor = UIColor.blue
         insActivity.startAnimation()
+        
+        insActivity2.animationDuration = 1
+        insActivity2.lineWidth = 3
+        insActivity2.segmentsNumber = 12
+        insActivity2.rotationDuration = 10
+        insActivity2.strokeColor = UIColor.red
+        insActivity2.startAnimation()
     }
     
     func setupInstActivity() {
