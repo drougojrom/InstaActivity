@@ -101,7 +101,7 @@ class InstaActivity: UIView, InstaActivityProtocol {
         super.layoutSubviews()
         
         let maxSize = max(0,min(bounds.width, bounds.height))
-        replicationLayer?.bounds = CGRect(x: 0, y: 0, width: CGFloat(maxSize), height: CGFloat(maxSize))
+        replicationLayer?.bounds = CGRect(x: 0, y: 0, width: maxSize, height: maxSize)
         replicationLayer?.position = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
         updateSegments()
     }
@@ -116,7 +116,7 @@ class InstaActivity: UIView, InstaActivityProtocol {
             let maxRadius = max(0,min(replicationLayer.bounds.width, replicationLayer.bounds.height))/2
             let radius: CGFloat = maxRadius - lineWidth/2
             segmentLayer?.bounds = CGRect(x: 0, y: 0, width: 2 * maxRadius, height: 2 * maxRadius)
-            segmentLayer?.position = CGPoint(x: (replicationLayer?.bounds.width)!/2, y: (replicationLayer?.bounds.height)! / 2)
+            segmentLayer?.position = CGPoint(x: replicationLayer.bounds.width/2, y: replicationLayer.bounds.height / 2)
             let path = UIBezierPath(arcCenter: CGPoint(x: maxRadius, y: maxRadius), radius: radius, startAngle: -angle/2 - CGFloat.pi/2, endAngle: angle/2 - CGFloat.pi/2, clockwise: true)
             
             segmentLayer.path = path.cgPath
